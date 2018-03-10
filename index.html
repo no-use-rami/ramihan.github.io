@@ -1,11 +1,11 @@
 ---
 layout: default
 ---
-<h2 class="headline">{{site.title}}</h2>
-<h4> google analytics study </h4>
+<h1 class="headline">{{site.title}}</h1>
+<h5> google analytics study </h5>
 <div class="article-list">
 {% for post in site.posts %}
-    <h3><a href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a></h3>
+    <h2><a href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a></h2>
     <p>{{post.excerpt | strip_html}}</p>
 {% endfor %}
 </div>

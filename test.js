@@ -2,9 +2,9 @@ var inputs = $('input[type="text"]');
 var googleSubmitBtn = $('#google-submit');
 var snackbar = $('#snackbar');
 
-var inputDate = $('#date');
-var inputAmount = $('#amount');
-var inputDesc = $('#desc');
+var inputName = $('#name');
+var inputAge = $('#age');
+var inputArea = $('#area');
 
 function isLoading(status){
   if(status){
@@ -40,9 +40,9 @@ $('#google-submit').click(function () {
     type: "GET",
     url: "https://script.google.com/macros/s/AKfycbz_Pf1vAabhEa-TnpdnvtLYUBYjs1_agbIbHVPSmnA3IxPJ6vw/exec",
     data: {
-      "일자": inputDate.val(),
-      "금액": inputAmount.val(),
-      "비고": inputDesc.val()
+      "이름": inputName.val(),
+      "나이": inputAge.val(),
+      "사는곳": inputArea.val()
     },
     success: function (response) {
       isLoading(false);
@@ -53,9 +53,9 @@ $('#google-submit').click(function () {
       }, 3000);
 
       //값 비워주기
-      inputDate.val('');
-      inputAmount.val('');
-      inputDesc.val('');
+      inputName.val('');
+      inputAge.val('');
+      inputArea.val('');
     },
     error: function (request, status, error) {
       isLoading(false);

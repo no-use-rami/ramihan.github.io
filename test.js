@@ -37,7 +37,7 @@ $('#google-submit').click(function () {
   isLoading(true);
 
   $.ajax({
-    type: "GET",
+    type: "POST",
     url: "https://script.google.com/macros/s/AKfycbyB6DMwvO8sQEaqZ2yfhxFURg1D57UV_nsrP5CmIK_xx1U0RNQ/exec",
     data: {
       "이름": inputName.val(),
